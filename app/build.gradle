@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk target_sdk
 
     defaultConfig {
         applicationId "com.xaluoqone.comppractise"
-        minSdk 23
-        targetSdk 31
+        minSdk min_sdk
+        targetSdk target_sdk
         versionCode 1
         versionName "1.0"
 
@@ -24,14 +24,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility java_version
+        targetCompatibility java_version
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = java_version
     }
 
     buildFeatures {
