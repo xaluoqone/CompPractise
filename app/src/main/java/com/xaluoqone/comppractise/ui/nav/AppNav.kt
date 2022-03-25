@@ -2,7 +2,7 @@ package com.xaluoqone.comppractise.ui.nav
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.compositionLocalOf
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -11,7 +11,7 @@ import com.xaluoqone.comppractise.ui.page.CustomPage
 import com.xaluoqone.comppractise.ui.page.MainPage
 import com.xaluoqone.comppractise.ui.page.SimpleUsagePage
 
-val LocalAppNav = compositionLocalOf<NavHostController> { error("导航未赋值！") }
+val LocalAppNav = staticCompositionLocalOf<NavHostController> { error("导航未赋值！") }
 
 @Composable
 fun AppNav() {
