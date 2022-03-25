@@ -3,7 +3,7 @@ package com.xaluoqone.comppractise.ui.page
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.*
@@ -13,25 +13,25 @@ import androidx.compose.ui.unit.dp
 import com.xaluoqone.comppractise.ui.nav.LocalAppNav
 import com.xaluoqone.comppractise.ui.nav.NavRoute
 
+val chapters = listOf(
+    NavRoute.Usage to "Compose简单用法",
+    NavRoute.Custom to "自定义Composable"
+)
+
 @Composable
 fun MainPage() {
     val navController = LocalAppNav.current
     LazyColumn {
-        itemsIndexed(listOf("Compose简单用法", "自定义Composable")) { index, title ->
+        items(chapters) {
             TextButton(
                 onClick = {
-                    when (index) {
-                        0 -> {
-                            navController.navigate(NavRoute.Usage.name)
-                        }
-                        else -> {}
-                    }
+                    navController.navigate(it.first.name)
                 },
                 Modifier
                     .padding(horizontal = 6.dp)
                     .fillMaxWidth()
             ) {
-                Text(title)
+                Text(it.second)
             }
         }
     }
