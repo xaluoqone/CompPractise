@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.xaluoqone.comppractise.ui.nav.LocalAppNav
+import com.xaluoqone.comppractise.ui.nav.NavRoute
 
 @Composable
 fun MainPage() {
@@ -21,7 +22,7 @@ fun MainPage() {
                 onClick = {
                     when (index) {
                         0 -> {
-                            navController.navigate("usage")
+                            navController.navigate(NavRoute.Usage.name)
                         }
                         else -> {}
                     }

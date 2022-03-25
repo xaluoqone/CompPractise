@@ -15,11 +15,11 @@ val LocalAppNav = compositionLocalOf<NavHostController> { error("导航未赋值
 @Composable
 fun AppNav() {
     CompositionLocalProvider(LocalAppNav provides rememberNavController()) {
-        NavHost(LocalAppNav.current, "main") {
-            composable("main") {
+        NavHost(LocalAppNav.current, NavRoute.Main.name) {
+            composable(NavRoute.Main.name) {
                 MainPage()
             }
-            composable("usage") {
+            composable(NavRoute.Usage.name) {
                 SimpleUsage()
             }
         }
