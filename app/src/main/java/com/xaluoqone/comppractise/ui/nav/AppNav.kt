@@ -8,7 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.xaluoqone.comppractise.ui.page.MainPage
-import com.xaluoqone.comppractise.ui.page.SimpleUsage
+import com.xaluoqone.comppractise.ui.page.SimpleUsagePage
 
 val LocalAppNav = compositionLocalOf<NavHostController> { error("导航未赋值！") }
 
@@ -20,7 +20,7 @@ fun AppNav() {
                 MainPage()
             }
             composable(NavRoute.Usage.name) {
-                SimpleUsage()
+                SimpleUsagePage()
             }
         }
     }
