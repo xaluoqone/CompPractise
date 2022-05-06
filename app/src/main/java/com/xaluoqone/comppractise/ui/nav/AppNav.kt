@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.xaluoqone.comppractise.ui.page.AnimationPage
 import com.xaluoqone.comppractise.ui.page.CustomPage
 import com.xaluoqone.comppractise.ui.page.MainPage
 import com.xaluoqone.comppractise.ui.page.SimpleUsagePage
@@ -25,6 +26,9 @@ fun AppNav() {
             }
             composable(NavRoute.Custom.name) {
                 CustomPage()
+            }
+            composable(NavRoute.Animation.name) {
+                AnimationPage()
             }
         }
     }

@@ -15,7 +15,8 @@ import com.xaluoqone.comppractise.ui.nav.NavRoute
 
 val chapters = listOf(
     NavRoute.Usage to "Compose简单用法",
-    NavRoute.Custom to "自定义Composable"
+    NavRoute.Custom to "自定义Composable",
+    NavRoute.Animation to "Compose动画",
 )
 
 @Composable
