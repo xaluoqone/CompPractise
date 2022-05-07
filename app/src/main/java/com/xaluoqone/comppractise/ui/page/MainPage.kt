@@ -10,6 +10,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.xaluoqone.comppractise.LocalStatusBarHeight
 import com.xaluoqone.comppractise.ui.nav.LocalAppNav
 import com.xaluoqone.comppractise.ui.nav.NavRoute
 
@@ -22,7 +23,7 @@ val chapters = listOf(
 @Composable
 fun MainPage() {
     val navController = LocalAppNav.current
-    LazyColumn {
+    LazyColumn(Modifier.padding(top = LocalStatusBarHeight.current)) {
         items(chapters) {
             TextButton(
                 onClick = {

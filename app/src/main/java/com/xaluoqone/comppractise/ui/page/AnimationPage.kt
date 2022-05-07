@@ -35,7 +35,7 @@ fun AnimationPage() {
                         anim.value + (10f * 360 + (1..360).random()),
                         tween(10000, easing = CubicBezierEasing(0f, .1f, 0f, .92f))
                     )*/
-                    anim.updateBounds(upperBound = 6000f)
+                    //anim.updateBounds(upperBound = 6000f)
                     anim.animateDecay((10..20).random() * 360f, decay)
                 }
             },
