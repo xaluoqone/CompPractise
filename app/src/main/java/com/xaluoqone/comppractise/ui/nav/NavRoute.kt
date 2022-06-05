@@ -5,4 +5,5 @@ enum class NavRoute {
     Usage,
     Custom,
     Animation,
+    Transition,
 }

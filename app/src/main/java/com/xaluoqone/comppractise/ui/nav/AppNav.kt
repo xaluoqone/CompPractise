@@ -7,10 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.xaluoqone.comppractise.ui.page.AnimationPage
-import com.xaluoqone.comppractise.ui.page.CustomPage
-import com.xaluoqone.comppractise.ui.page.MainPage
-import com.xaluoqone.comppractise.ui.page.SimpleUsagePage
+import com.xaluoqone.comppractise.ui.page.*
 
 val LocalAppNav = staticCompositionLocalOf<NavHostController> { error("导航未赋值！") }
 
@@ -29,6 +26,9 @@ fun AppNav() {
             }
             composable(NavRoute.Animation.name) {
                 AnimationPage()
+            }
+            composable(NavRoute.Transition.name) {
+                TransitionPage()
             }
         }
     }
