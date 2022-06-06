@@ -30,6 +30,9 @@ fun AppNav() {
             composable(NavRoute.Transition.name) {
                 TransitionPage()
             }
+            composable(NavRoute.AnimatedVisibility.name) {
+                AnimatedVisibilityPage()
+            }
         }
     }
 }

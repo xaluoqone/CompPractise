@@ -19,6 +19,7 @@ val chapters = listOf(
     NavRoute.Custom to "自定义Composable",
     NavRoute.Animation to "Compose动画",
     NavRoute.Transition to "Compose Transition 动画",
+    NavRoute.AnimatedVisibility to "AnimatedVisibility",
 )
 
 @Composable

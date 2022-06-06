@@ -6,4 +6,5 @@ enum class NavRoute {
     Custom,
     Animation,
     Transition,
+    AnimatedVisibility
 }
